@@ -19,111 +19,123 @@
   .atualizado { color: #666; font-size: 0.9em; margin-bottom: 2em; }
   ul { padding-left: 1.2em; }
   li { margin-bottom: 0.4em; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92em; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  .tabela { overflow-x: auto; }
   .contato {
     background: #f4f4f4;
     border-radius: 8px;
     padding: 16px 20px;
     margin-top: 2em;
   }
-  a { color: #0b5fff; }
+  a { color: #0b5fff; word-break: break-word; }
 </style>
 </head>
 <body>
 
 <h1>Política de Privacidade — Ficha Academia</h1>
-<p class="atualizado">Última atualização: [preencher data de publicação]</p>
+<p class="atualizado">Última atualização: 6 de outubro de 2026</p>
 
 <p>
-Esta Política de Privacidade descreve como o aplicativo <strong>Ficha Academia</strong>
-("app", "nós") coleta, usa e protege as informações dos usuários. Ao usar o app, você
-concorda com os termos descritos abaixo.
+Esta política explica quais dados o aplicativo <strong>Ficha Academia</strong> ("app") coleta,
+para que os usa, com quem os compartilha e como você pode controlá-los. O app é oferecido por
+<strong>Fernando Alfeld</strong> ("nós"), contato:
+<a href="mailto:fernandoalfeld@gmail.com">fernandoalfeld@gmail.com</a>.
 </p>
 
-<h2>1. Quais dados coletamos</h2>
-<p>Coletamos as seguintes categorias de dados:</p>
+<h2>1. Como o app funciona com e sem conta</h2>
 <ul>
-  <li><strong>Dados de conta:</strong> nome e e-mail, fornecidos por você ao criar uma
-      conta (por e-mail/senha ou login com o Google).</li>
-  <li><strong>Conteúdo do usuário:</strong> as fichas de treino, exercícios, séries,
-      repetições, cargas e o histórico de treinos que você cadastra no app.</li>
-  <li><strong>Dados de uso e diagnóstico:</strong> eventos de uso do app (por exemplo,
-      quais telas são acessadas e ações realizadas), coletados via Firebase Analytics,
-      para entender como o app é utilizado e corrigir problemas.</li>
-  <li><strong>Identificadores de publicidade:</strong> o app exibe anúncios de terceiros
-      através do Google AdMob, que pode coletar identificadores do dispositivo (como o
-      Advertising ID) para exibir e medir anúncios.</li>
-  <li><strong>Token de notificação:</strong> um identificador do dispositivo usado pelo
-      Firebase Cloud Messaging para o envio de notificações push, que podem ser
-      desativadas nas configurações do seu aparelho.</li>
+  <li><strong>Sem conta:</strong> suas fichas de treino e seu histórico ficam
+      <strong>somente no seu aparelho</strong>. Não os enviamos aos nossos servidores. Se você
+      desinstalar o app, esses dados são perdidos.</li>
+  <li><strong>Com conta:</strong> suas fichas e seu histórico são guardados na sua conta, na
+      nuvem, para você acessá-los e recuperá-los.</li>
 </ul>
 
-<h2>2. Como usamos os dados</h2>
+<h2>2. Dados que coletamos</h2>
+<div class="tabela">
+<table>
+  <tr><th>Dado</th><th>Quando</th><th>Para quê</th></tr>
+  <tr><td>E-mail, nome e foto de perfil</td><td>Ao criar conta ou entrar com e-mail/senha ou com o Google</td><td>Identificar sua conta e permitir o login</td></tr>
+  <tr><td>Senha</td><td>Login com e-mail/senha</td><td>Autenticação. Ela é guardada pelo Firebase Authentication, de forma protegida; não temos acesso a ela</td></tr>
+  <tr><td>Fichas, exercícios, cargas, séries, repetições, histórico de treinos e datas</td><td>Quando você usa o app logado</td><td>Fornecer o serviço: guardar e mostrar seus treinos</td></tr>
+  <tr><td>Identificador do usuário (uid)</td><td>Ao usar o app logado</td><td>Vincular seus dados à sua conta; também aparece nos relatórios de uso e de erros</td></tr>
+  <tr><td>Dados de uso (telas visitadas, ações no app)</td><td>Somente depois do seu consentimento, quando exigido</td><td>Entender como o app é usado e melhorá-lo (Firebase Analytics)</td></tr>
+  <tr><td>Relatórios de erros e dados técnicos do aparelho (modelo, versão do sistema, versão do app)</td><td>Somente depois do seu consentimento, quando exigido</td><td>Corrigir falhas (Firebase Crashlytics)</td></tr>
+  <tr><td>Identificador de publicidade e dados do aparelho</td><td>Nas regiões em que você consentir, ou onde a lei permitir</td><td>Exibir anúncios (Google AdMob)</td></tr>
+  <tr><td>Token de notificação</td><td>Se você permitir notificações</td><td>Enviar avisos ao seu aparelho (Firebase Cloud Messaging)</td></tr>
+  <tr><td>Dados da assinatura Premium</td><td>Se você assinar</td><td>Confirmar que você é assinante. O pagamento é processado pelo Google Play; não recebemos os dados do seu cartão</td></tr>
+</table>
+</div>
+<p>Não coletamos localização precisa, contatos, fotos do seu aparelho, microfone nem câmera.</p>
+
+<h2>3. Com quem compartilhamos</h2>
+<p>Usamos serviços do <strong>Google</strong> (Firebase e AdMob) para operar o app:</p>
 <ul>
-  <li>Autenticar sua conta e sincronizar suas fichas de treino entre dispositivos;</li>
-  <li>Manter o funcionamento e a segurança do app;</li>
-  <li>Entender o uso do app e melhorar sua experiência (analytics);</li>
-  <li>Exibir anúncios e medir seu desempenho;</li>
-  <li>Enviar notificações relacionadas ao uso do app (quando permitido por você).</li>
+  <li><strong>Firebase Authentication, Firestore, Cloud Messaging, Analytics e Crashlytics:</strong>
+      guardam sua conta e seus dados, e medem uso e erros.</li>
+  <li><strong>Google AdMob:</strong> exibe anúncios. Ele pode usar o identificador de
+      publicidade do seu aparelho. Você controla isso nas configurações do Android e em
+      "Opções de privacidade" no app.</li>
+  <li><strong>Google Play Billing:</strong> processa a assinatura.</li>
 </ul>
+<p>Não vendemos seus dados. Não os compartilhamos com terceiros além dos citados, exceto se a
+lei exigir.</p>
+<p>Os servidores do Google podem ficar fora do Brasil (inclusive nos Estados Unidos). Nesses
+casos, a transferência é feita com as salvaguardas que o Google oferece.</p>
 
-<h2>3. Compartilhamento de dados com terceiros</h2>
-<p>
-Utilizamos os seguintes serviços de terceiros para operar o app. Cada um deles processa
-dados de acordo com sua própria política de privacidade:
-</p>
+<h2>4. Anúncios e consentimento</h2>
+<p>O app exibe anúncios, exceto para assinantes Premium. Onde a lei exige (como no Espaço
+Econômico Europeu, no Reino Unido e em alguns estados dos EUA), o app pergunta sua
+preferência ao abrir e só liga o Analytics, o Crashlytics e os anúncios depois disso. Você
+pode mudar sua escolha a qualquer momento em <strong>Configurações → Opções de
+privacidade</strong> (o botão aparece nas regiões em que a lei exige), ou apagando os dados
+do app.</p>
+
+<h2>5. Por quanto tempo guardamos</h2>
+<p>Guardamos seus dados enquanto sua conta existir. Ao excluir a conta, apagamos suas fichas,
+seu histórico e seu perfil (veja a seção 6). Relatórios de erros e de uso, que ficam com o
+Google, seguem os prazos de retenção do Firebase.</p>
+
+<h2>6. Seus direitos e como excluir sua conta</h2>
+<p>Conforme a <strong>LGPD</strong> (Lei 13.709/2018), você pode pedir: confirmação de que
+tratamos seus dados, acesso, correção, anonimização ou eliminação, portabilidade, informação
+sobre com quem compartilhamos e revogação de consentimento.</p>
 <ul>
-  <li><strong>Google Firebase</strong> (Authentication, Firestore, Analytics, Cloud
-      Messaging) — armazenamento de dados de conta e de conteúdo, autenticação e
-      métricas de uso.</li>
-  <li><strong>Google AdMob</strong> — exibição de anúncios dentro do app.</li>
+  <li><strong>Excluir a conta e os dados:</strong> dentro do app, em <strong>Configurações →
+      Excluir minha conta</strong>. Isso apaga suas fichas, seu histórico e seu perfil na
+      nuvem e encerra a conta.</li>
+  <li><strong>Sem acesso ao app?</strong> Siga as instruções em
+      <a href="excluir-conta.html">Excluir sua conta do Ficha Academia</a>: escreva para
+      <a href="mailto:fernandoalfeld@gmail.com">fernandoalfeld@gmail.com</a> pelo e-mail
+      cadastrado na conta. Respondemos em até 15 dias.</li>
 </ul>
-<p>
-Não vendemos seus dados pessoais a terceiros. O compartilhamento descrito acima ocorre
-apenas para o funcionamento do app e para publicidade.
-</p>
+<p><strong>Moradores dos Estados Unidos:</strong> conforme as leis estaduais aplicáveis (como a
+da Califórnia), você pode saber quais dados coletamos, pedir a exclusão e recusar a venda ou o
+compartilhamento de dados para publicidade. Nós não vendemos dados; o compartilhamento para
+publicidade pode ser recusado em <strong>Opções de privacidade</strong>. Pedidos:
+<a href="mailto:fernandoalfeld@gmail.com">fernandoalfeld@gmail.com</a>.</p>
 
-<h2>4. Assinatura Premium</h2>
-<p>
-A assinatura Premium é processada diretamente pela Google Play ou pela App Store,
-conforme a plataforma usada. Não temos acesso aos dados do seu cartão de crédito ou
-método de pagamento — essas informações ficam sob responsabilidade da loja de
-aplicativos.
-</p>
+<h2>7. Segurança</h2>
+<p>Os dados trafegam por conexão criptografada, e cada usuário só acessa os próprios dados
+(regras de acesso no banco). Nenhum sistema é totalmente seguro; se houver um incidente que
+afete seus dados, avisaremos conforme a lei.</p>
 
-<h2>5. Armazenamento e segurança</h2>
-<p>
-Seus dados são armazenados nos servidores do Google Firebase, com conexão criptografada
-(HTTPS/TLS) entre o app e o servidor. Adotamos medidas razoáveis para proteger suas
-informações contra acesso não autorizado.
-</p>
+<h2>8. Crianças</h2>
+<p>O app não é voltado a menores de 13 anos e não coletamos dados de crianças de propósito. Se
+soubermos que coletamos, apagamos.</p>
 
-<h2>6. Seus direitos e exclusão de dados</h2>
-<p>
-Você pode excluir sua conta e todos os dados associados a qualquer momento diretamente
-pelo app, nas configurações da conta, ou solicitando a exclusão pelo e-mail de contato
-abaixo. Ao excluir a conta, suas fichas de treino, histórico e dados de perfil são
-removidos permanentemente.
-</p>
+<h2>9. Mudanças nesta política</h2>
+<p>Podemos atualizar esta política. A data no topo mostra a versão mais recente, e avisos
+importantes aparecerão no app.</p>
 
-<h2>7. Crianças</h2>
-<p>
-O app não é direcionado a crianças menores de 13 anos e não coletamos intencionalmente
-dados de crianças nessa faixa etária.
-</p>
-
-<h2>8. Alterações nesta política</h2>
-<p>
-Podemos atualizar esta Política de Privacidade periodicamente. Mudanças significativas
-serão comunicadas por meio do próprio app ou desta página.
-</p>
-
-<h2>9. Contato</h2>
+<h2>10. Contato</h2>
 <div class="contato">
-  <p>
-  Em caso de dúvidas sobre esta política ou sobre o tratamento dos seus dados, entre em
-  contato pelo e-mail:<br>
-  <strong>[preencher e-mail de suporte]</strong>
-  </p>
+  <strong>Fernando Alfeld</strong> —
+  <a href="mailto:fernandoalfeld@gmail.com">fernandoalfeld@gmail.com</a><br>
+  Encarregado de dados (DPO): Fernando Alfeld —
+  <a href="mailto:fernandoalfeld@gmail.com">fernandoalfeld@gmail.com</a>
 </div>
 
 </body>
